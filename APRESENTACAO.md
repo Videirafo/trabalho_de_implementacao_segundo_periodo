@@ -4,6 +4,8 @@
 
 Este material é para entender o trabalho e explicar com suas próprias palavras. Não precisa decorar tudo. Na apresentação, mostre uma lista pequena e depois execute o programa.
 
+Para estudar com mais detalhes **como cada algoritmo funciona por dentro**, use também a [explicação dos nove algoritmos](EXPLICACAO_DE_CADA_ALGORITMO.md).
+
 ## 1. Como começar a apresentação
 
 > Nosso trabalho é sobre algoritmos de ordenação. Ordenar significa colocar números em uma sequência, normalmente do menor para o maior.
