@@ -4,6 +4,14 @@
 
 Neste trabalho, fizemos nove algoritmos de ordenação em Python. Cada um organiza uma lista de números de um jeito diferente.
 
+## Roteiro para apresentar ao professor
+
+Preparei uma explicação simples de cada um dos nove algoritmos, com exemplos pequenos, o que falar durante os testes e respostas a perguntas comuns.
+
+**[Abrir o roteiro de apresentação](./APRESENTACAO.md)**
+
+O roteiro é material de estudo: leia, teste os exemplos e explique com suas próprias palavras.
+
 ## Como executar
 
 Abra a pasta no VS Code e execute no terminal:
