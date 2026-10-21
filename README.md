@@ -12,6 +12,10 @@ Preparei uma explicação simples de cada um dos nove algoritmos, com exemplos p
 
 O roteiro é material de estudo: leia, teste os exemplos e explique com suas próprias palavras.
 
+## Explicação de cada algoritmo
+
+**[Entender os nove algoritmos, um por um](./EXPLICACAO_DE_CADA_ALGORITMO.md)** — explicações passo a passo, exemplos pequenos, o significado das variáveis, vantagens e desvantagens, com links para cada código e vídeo.
+
 ## Como executar
 
 Abra a pasta no VS Code e execute no terminal:
