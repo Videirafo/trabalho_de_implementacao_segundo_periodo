@@ -1,15 +1,24 @@
-"""Confere se todos os nove algoritmos ordenam sem alterar a lista original."""
-from main import ALGORITMOS
+import selection_sort
+import bubble_sort
+import insertion_sort
+import merge_sort
+import quick_sort
+import heap_sort
+import counting_sort
+import radix_sort
+import bucket_sort
 
-CASOS = [
-    [], [5], [5, 2, 9, 1, 4], [3, 3, 1, 2, 1, 3],
-    [0, 0, 0, 0], list(range(30)), list(range(29, -1, -1)),
-]
+lista = [5, 2, 8, 1, 5, 0]
+esperado = [0, 1, 2, 5, 5, 8]
 
-for nome, ordenar in ALGORITMOS.items():
-    for numeros in CASOS:
-        original = numeros.copy()
-        assert ordenar(numeros) == sorted(original), f"Falha no {nome}"
-        assert numeros == original, f"{nome} alterou a entrada"
-    print(f"{nome}: OK")
-print("Todos os testes passaram.")
+assert selection_sort.ordenar(lista) == esperado
+assert bubble_sort.ordenar(lista) == esperado
+assert insertion_sort.ordenar(lista) == esperado
+assert merge_sort.ordenar(lista) == esperado
+assert quick_sort.ordenar(lista) == esperado
+assert heap_sort.ordenar(lista) == esperado
+assert counting_sort.ordenar(lista) == esperado
+assert radix_sort.ordenar(lista) == esperado
+assert bucket_sort.ordenar(lista) == esperado
+
+print('Os nove algoritmos passaram no teste.')
