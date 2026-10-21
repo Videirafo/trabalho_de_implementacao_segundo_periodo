@@ -1,12 +1,12 @@
-# Vantagem: bom para listas pequenas ou quase ordenadas.
-# Desvantagem: lento para listas grandes e bagunçadas (O(n²)).
+# Vantagem: bom para listas pequenas.
+# Desvantagem: lento em listas muito misturadas.
 def ordenar(lista):
-    a = lista.copy()
-    for i in range(1, len(a)):
-        atual = a[i]
+    numeros = lista.copy()
+    for i in range(1, len(numeros)):
+        atual = numeros[i]
         j = i - 1
-        while j >= 0 and a[j] > atual:
-            a[j + 1] = a[j]
-            j -= 1
-        a[j + 1] = atual
-    return a
+        while j >= 0 and numeros[j] > atual:
+            numeros[j + 1] = numeros[j]
+            j = j - 1
+        numeros[j + 1] = atual
+    return numeros

@@ -1,13 +1,11 @@
-# Vantagem: fácil de entender; para se já estiver ordenado.
-# Desvantagem: faz muitas comparações (O(n²)).
+# Vantagem: fácil de acompanhar.
+# Desvantagem: faz muitas comparações.
 def ordenar(lista):
-    a = lista.copy()
-    for fim in range(len(a) - 1, 0, -1):
-        trocou = False
-        for i in range(fim):
-            if a[i] > a[i + 1]:
-                a[i], a[i + 1] = a[i + 1], a[i]
-                trocou = True
-        if not trocou:
-            break
-    return a
+    numeros = lista.copy()
+    for i in range(len(numeros)):
+        for j in range(len(numeros) - 1 - i):
+            if numeros[j] > numeros[j + 1]:
+                auxiliar = numeros[j]
+                numeros[j] = numeros[j + 1]
+                numeros[j + 1] = auxiliar
+    return numeros

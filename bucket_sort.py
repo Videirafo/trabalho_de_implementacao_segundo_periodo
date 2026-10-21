@@ -1,18 +1,22 @@
-# Vantagem: eficiente quando os valores estão distribuídos uniformemente.
-# Desvantagem: pode ficar lento se muitos números caírem no mesmo balde.
-from insertion_sort import ordenar as insertion_sort
+# Vantagem: rápido se os números estão bem distribuídos.
+# Desvantagem: pode ser lento se ficarem no mesmo grupo.
+import insertion_sort
 
 
 def ordenar(lista):
-    if not lista:
+    if len(lista) == 0:
         return []
-    qtd = max(1, len(lista) // 100)
-    maior = max(lista)
-    baldes = [[] for _ in range(qtd)]
+    quantidade = min(len(lista), 1000)
+    faixa = max(lista) // quantidade + 1
+    baldes = []
+    for i in range(quantidade):
+        baldes.append([])
     for numero in lista:
-        indice = numero * qtd // (maior + 1)
-        baldes[indice].append(numero)
+        posicao = numero // faixa
+        baldes[posicao].append(numero)
     resultado = []
     for balde in baldes:
-        resultado.extend(insertion_sort(balde))
+        ordenados = insertion_sort.ordenar(balde)
+        for numero in ordenados:
+            resultado.append(numero)
     return resultado

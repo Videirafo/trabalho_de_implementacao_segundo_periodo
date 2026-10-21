@@ -1,12 +1,13 @@
-# Vantagem: muito rápido se os valores estão numa faixa pequena.
-# Desvantagem: usa memória proporcional ao maior valor; aceita inteiros >= 0.
+# Vantagem: rápido quando os números são pequenos.
+# Desvantagem: gasta memória se o maior número for grande.
 def ordenar(lista):
-    if not lista:
+    if len(lista) == 0:
         return []
     contagem = [0] * (max(lista) + 1)
     for numero in lista:
-        contagem[numero] += 1
+        contagem[numero] = contagem[numero] + 1
     resultado = []
-    for numero, quantidade in enumerate(contagem):
-        resultado.extend([numero] * quantidade)
+    for numero in range(len(contagem)):
+        for i in range(contagem[numero]):
+            resultado.append(numero)
     return resultado
