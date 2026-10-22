@@ -103,29 +103,6 @@ Vantagem: pode ser rápido com números bem distribuídos. Desvantagem: pode fic
 Detalhe do código: nossa versão usa o Insertion Sort para ordenar cada grupo.
 
 
-Abra o terminal na pasta do projeto e rode:
-
-bash
-python testes.py
-python main.py
-
-
-Rodar:
-
-- `testes.py` usa uma lista pequena para conferir se os nove algoritmos chegam à mesma ordem.
-  
-- `main.py` cria uma lista de 100.000 números aleatórios, de 0 a 9.999, e mostra o tempo de execução.
-  
-- Merge, Quick, Heap, Counting, Radix e Bucket recebem os 100.000 números no teste normal.
-  
-- Selection, Bubble e Insertion recebem 1.000 números, porque são mais lentos. Se o professor exigir testar os 100.000 nesses três também, altere `teste_completo = False` para `True` no `main.py`. **Isso pode demorar muito.
-  
-- Quando aparece `OK`, significa que o resultado bateu com a ordem correta.
-- 
-
-O programa gera os 100.000, mas usa a amostra de 1.000 para os três primeiros.
-
-
 
 Possíveis Perguntas!
 
