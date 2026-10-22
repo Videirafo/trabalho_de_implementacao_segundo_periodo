@@ -1,8 +1,6 @@
-# Entendendo os 9 algoritmos — um de cada vez
 
-Material para estudar **o código simples** antes da apresentação de **16/11/2026**. A ideia é conseguir mostrar um exemplo pequeno, explicar o que o programa faz e dizer uma vantagem e uma desvantagem.
 
-**Comece por aqui:** imagine a lista `[5, 2, 8, 1]`. Ordenar significa deixar `[1, 2, 5, 8]`. Os nove métodos fazem isso, só que de maneiras diferentes.
+
 
 ## 1. Selection Sort (seleção)
 
@@ -23,6 +21,8 @@ Material para estudar **o código simples** antes da apresentação de **16/11/2
 
 [Abrir código](selection_sort.py) · [Ver vídeo](videos/selection_sort.mp4)
 
+
+
 ## 2. Bubble Sort (bolha)
 
 **A ideia:** comparar dois números vizinhos. Se estiverem na ordem errada, trocar os dois.
@@ -42,6 +42,8 @@ Material para estudar **o código simples** antes da apresentação de **16/11/2
 
 [Abrir código](bubble_sort.py) · [Ver vídeo](videos/bubble_sort.mp4)
 
+
+
 ## 3. Insertion Sort (inserção)
 
 **A ideia:** parecido com organizar cartas na mão. Pegamos um número e encaixamos onde ele deveria estar entre os que já vimos.
@@ -60,6 +62,8 @@ Material para estudar **o código simples** antes da apresentação de **16/11/2
 **Como explicar:** “Eu vou montando uma parte organizada e coloco cada novo número no espaço certo.”
 
 [Abrir código](insertion_sort.py) · [Ver vídeo](videos/insertion_sort.mp4)
+
+
 
 ## 4. Merge Sort (intercalação)
 
@@ -82,6 +86,8 @@ Quando `ordenar` chama `ordenar` novamente, chamamos isso de **recursão**: a me
 
 [Abrir código](merge_sort.py) · [Ver vídeo](videos/merge_sort.mp4)
 
+
+
 ## 5. Quick Sort (rápida)
 
 **A ideia:** escolher um número de referência, chamado **pivô**, e separar os menores, iguais e maiores que ele.
@@ -100,6 +106,8 @@ Quando `ordenar` chama `ordenar` novamente, chamamos isso de **recursão**: a me
 **Como explicar:** “Escolho um pivô, separo os números em três grupos e repito a ideia nas partes que faltam organizar.”
 
 [Abrir código](quick_sort.py) · [Ver vídeo](videos/quick_sort.mp4)
+
+
 
 ## 6. Heap Sort
 
@@ -122,6 +130,8 @@ Esse grupo de posições é chamado de **heap**. Não é necessário desenhar um
 
 [Abrir código](heap_sort.py) · [Ver vídeo](videos/heap_sort.mp4)
 
+
+
 ## 7. Counting Sort (contagem)
 
 **A ideia:** contar quantas vezes cada número aparece e reconstruir a lista na sequência correta.
@@ -139,6 +149,8 @@ Esse grupo de posições é chamado de **heap**. Não é necessário desenhar um
 **Como explicar:** “Em vez de trocar posições, eu conto os valores e monto outra lista já ordenada.”
 
 [Abrir código](counting_sort.py) · [Ver vídeo](videos/counting_sort.mp4)
+
+
 
 ## 8. Radix Sort (por dígitos)
 
@@ -177,22 +189,12 @@ Esse grupo de posições é chamado de **heap**. Não é necessário desenhar um
 
 [Abrir código](bucket_sort.py) · [Ver vídeo](videos/bucket_sort.mp4)
 
----
 
-## O que explicar no `main.py`
-
-- `import random`: usamos para sortear os números.
-- `import time`: usamos para medir quanto tempo cada função levou.
-- O `for` cria **100.000 valores aleatórios entre 0 e 9.999**.
-- `testar(...)` executa uma função, mede o tempo e verifica se a lista ficou correta.
-- `sorted(lista)` aparece **só na conferência**, para comparar o resultado. A implementação de cada algoritmo está no seu próprio arquivo.
-- O programa usa **1.000 valores no Selection, Bubble e Insertion** no teste padrão, porque eles são muito lentos com 100.000. Os outros seis usam os 100.000. Para testar tudo com 100.000, altere `teste_completo` para `True`, sabendo que pode demorar bastante.
-- No final de cada linha, `OK` significa que o algoritmo chegou ao resultado esperado.
 
 ## Três coisas para não confundir na apresentação
 
 1. **Todos ordenam; o jeito de ordenar muda.** Bubble troca vizinhos, Selection procura o menor, Counting conta, Radix separa por dígitos, e assim por diante.
-2. **Os tempos não são diretamente comparáveis se o tamanho da lista não é o mesmo.** Não diga que um método com 1.000 elementos foi mais rápido que outro com 100.000 em condições iguais.
-3. **Nosso exercício usa números inteiros não negativos.** Não afirme que Counting, Radix e Bucket desta versão aceitam qualquer tipo de dado.
+2. 
+3. **Os tempos não são diretamente comparáveis se o tamanho da lista não é o mesmo.** Não diga que um método com 1.000 elementos foi mais rápido que outro com 100.000 em condições iguais.
+4. **Nosso exercício usa números inteiros não negativos.** Não afirme que Counting, Radix e Bucket desta versão aceitam qualquer tipo de dado.
 
-**Material complementar:** [roteiro para falar com o professor](APRESENTACAO.md). Você pode estudar primeiro este guia, depois usar o roteiro mais curto para treinar a apresentação.
